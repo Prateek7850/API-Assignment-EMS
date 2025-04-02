@@ -20,7 +20,7 @@ import com.ems.entity.User;
 import com.ems.utill.JwtUtil;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("api/auth")
 public class RegistrationController {
           
 	@Autowired

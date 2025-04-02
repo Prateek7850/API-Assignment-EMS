@@ -44,7 +44,7 @@ public class SecurityConfig {
 	    	 .csrf()
 	    	 .disable()
 	            .authorizeHttpRequests()
-	                .requestMatchers(HttpMethod.GET,"/auth/register").hasRole("ADMIN")
+	                .requestMatchers(HttpMethod.GET,"api/auth/register").hasRole("ADMIN")
 	                .requestMatchers(HttpMethod.POST,"/auth/register").permitAll()
 	                .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()// Public access for the register API
 	                .requestMatchers(HttpMethod.GET, "/api/**").hasAnyRole("ADMIN","USER")
