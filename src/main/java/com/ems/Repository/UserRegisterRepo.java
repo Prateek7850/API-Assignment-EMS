@@ -1,4 +1,4 @@
-package com.ems.Repository;
+package com.ems.repository;
 
 import java.util.Optional;
 

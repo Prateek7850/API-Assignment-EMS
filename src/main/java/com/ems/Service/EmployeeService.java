@@ -1,4 +1,4 @@
-package com.ems.Service;
+package com.ems.service;
 
 import java.util.List;
 

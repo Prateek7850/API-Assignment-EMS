@@ -1,4 +1,4 @@
-package com.ems.Controller;
+package com.ems.controller;
 
 import java.util.List;
 
@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ems.Authentication.CustomUserDetailService;
-import com.ems.Service.UserRegisterService;
+import com.ems.authentication.CustomUserDetailService;
 import com.ems.entity.User;
+import com.ems.service.UserRegisterService;
 import com.ems.utill.JwtUtil;
 
 @RestController
-@RequestMapping("api/auth")
+@RequestMapping("/api/auth/")
 public class RegistrationController {
           
 	@Autowired
@@ -35,18 +35,18 @@ public class RegistrationController {
 	@Autowired
 	private JwtUtil jwtUtil;
 	
-	@PostMapping("/register")
+	@PostMapping("register")
 	public ResponseEntity<User> registerUser(@RequestBody User user) {
 		userRegisterService.addUser(user);
 		return new ResponseEntity<>(user,HttpStatus.OK);
 	}
-	@GetMapping("/register")
+	@GetMapping("register")
 	public ResponseEntity<List<User>> getAllUser() {
 		List<User> user = userRegisterService.getAllUser();
 		return new ResponseEntity<>(user,HttpStatus.OK);
 	}     
 	
-	@PostMapping("/login")
+	@PostMapping("login")
 	public ResponseEntity<String> login(@RequestBody User user){
 		try {
 		authenticationManager.authenticate

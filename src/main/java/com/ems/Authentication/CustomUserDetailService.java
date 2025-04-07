@@ -1,4 +1,4 @@
-package com.ems.Authentication;
+package com.ems.authentication;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -11,9 +11,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.ems.Repository.UserRegisterRepo;
 import com.ems.entity.User;
 import com.ems.entity.UserRoles;
+import com.ems.repository.UserRegisterRepo;
 
 @Service
 public class CustomUserDetailService implements UserDetailsService {

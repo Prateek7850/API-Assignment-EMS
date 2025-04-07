@@ -1,4 +1,4 @@
-package com.ems.Controller;
+package com.ems.controller;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ems.Service.DepartmentService;
 import com.ems.entity.Department;
 import com.ems.entity.Employee;
+import com.ems.service.DepartmentService;
 
 @RestController
 @RequestMapping("/api/")

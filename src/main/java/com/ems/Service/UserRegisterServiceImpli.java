@@ -1,4 +1,4 @@
-package com.ems.Service;
+package com.ems.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.ems.Repository.UserRegisterRepo;
 import com.ems.entity.User;
+import com.ems.repository.UserRegisterRepo;
 
 @Service
 public class UserRegisterServiceImpli implements UserRegisterService {

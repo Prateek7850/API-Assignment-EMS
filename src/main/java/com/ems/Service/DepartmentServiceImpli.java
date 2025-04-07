@@ -1,11 +1,12 @@
-package com.ems.Service;
+package com.ems.service;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.ems.Repository.DepartmentRepository;
+
 import com.ems.entity.Department;
+import com.ems.repository.DepartmentRepository;
 
 @Service
 public class DepartmentServiceImpli implements DepartmentService{

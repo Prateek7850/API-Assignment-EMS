@@ -1,4 +1,4 @@
-package com.ems.Authentication;
+package com.ems.authentication;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,8 +45,8 @@ public class SecurityConfig {
 	    	 .disable()
 	            .authorizeHttpRequests()
 	                .requestMatchers(HttpMethod.GET,"api/auth/register").hasRole("ADMIN")
-	                .requestMatchers(HttpMethod.POST,"/auth/register").permitAll()
-	                .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()// Public access for the register API
+	                .requestMatchers(HttpMethod.POST,"api/auth/register").permitAll()
+	                .requestMatchers(HttpMethod.POST,"api/auth/login").permitAll()// Public access for the register API
 	                .requestMatchers(HttpMethod.GET, "/api/**").hasAnyRole("ADMIN","USER")
 	                .requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN")
 	                .requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN")

@@ -1,4 +1,4 @@
-package com.ems.Service;
+package com.ems.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ems.Repository.EmployeeRepository;
 import com.ems.entity.Designation;
 import com.ems.entity.Employee;
+import com.ems.repository.EmployeeRepository;
 
 @Service
 public class EmployeeServiceImpli implements EmployeeService {
@@ -52,6 +52,13 @@ public class EmployeeServiceImpli implements EmployeeService {
 
 	@Override
 	public Employee updateEmployee(Employee employee) {
+		if(employee.getDesignation()==Designation.JUNIOR_DEVELOPER) {
+			employee.setSalary(50000);
+		}else if(employee.getDesignation()==Designation.MANAGER) {
+			employee.setSalary(100000);
+		}else if(employee.getDesignation()==Designation.SENIOR_DEVELOPER) {
+			employee.setSalary(150000);
+		}
 	     Employee employeeUpdated = employeeRepostory.save(employee);
 		return employeeUpdated;
 	}
